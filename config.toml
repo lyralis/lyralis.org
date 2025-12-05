@@ -1,0 +1,54 @@
+base_url = "https://lyralis.org"
+title = "Lyralis"
+description = "An underground creative collective where engineers gather to build the future."
+compile_sass = true
+build_search_index = true
+generate_feeds = true
+author = "Lyralis"
+theme = "terminus"
+
+taxonomies = [
+    { name = "authors" },
+    { name = "tags" }
+]
+
+[markdown]
+highlight_code = true
+highlight_theme = "monokai"
+render_emoji = true
+bottom_footnotes = true
+github_alerts = true
+
+[extra]
+close_responsive_menu_on_resize = true
+copy_button = true
+favicon = "images/favicon.png"
+
+layout = "center"
+show_default_author = false
+
+main_menu = [
+    { name = "Blog", url = "blog", trailing_slash = true },
+    { name = "Tags", url = "tags", trailing_slash = true },
+    { name = "Authors", url = "authors", trailing_slash = true },
+    { name = "Projects", url = "projects", trailing_slash = true },
+    { name = "Repository", url = "https://github.com/lyralis/lyralis.org", new_tab = true },
+]
+
+socials = [
+    { name = "email", url = "mailto:info@lyralis.org" },
+    { name = "GitHub", url = "https://github.com/lyralis" },
+]
+
+[extra.content_security_policy]
+enable = true
+allowed_domains = [
+    { directive = "connect-src", domains = ["'self'", "cloudflareinsights.com"] },
+    { directive = "script-src", domains = ["'self'", "static.cloudflareinsights.com"] },
+    { directive = "style-src", domains = ["'self'", "fonts.googleapis.com"] },
+    { directive = "font-src", domains = ["'self'", "fonts.gstatic.com"] },
+]
+
+[extra.responsive_images]
+widths = [640, 784, 1280, 1920, 2560]
+fallback_width = 1280

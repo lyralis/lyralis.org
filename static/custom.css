@@ -1,0 +1,12 @@
+/* フォントファミリーをオーバーライド */
+/* IBM Plex Sans JP を最初に配置することで日本語に適用され、英語や記号は Fira Code が使われます */
+body {
+    font-family: 'IBM Plex Sans JP', 'Fira Code', Monaco, Consolas, 'Ubuntu Mono', monospace !important;
+}
+
+/* コードブロックなども同様にオーバーライド */
+code,
+kbd,
+pre {
+    font-family: 'IBM Plex Sans JP', 'Fira Code', Monaco, Consolas, 'Ubuntu Mono', monospace !important;
+}
