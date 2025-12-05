@@ -8,8 +8,8 @@ author = "Lyralis"
 theme = "terminus"
 
 taxonomies = [
-    { name = "authors" },
-    { name = "tags" }
+    { name = "tags", feed = true },
+    { name = "categories", feed = true, paginate_by = 5 },
 ]
 
 [markdown]
@@ -30,7 +30,6 @@ show_default_author = false
 main_menu = [
     { name = "Blog", url = "blog", trailing_slash = true },
     { name = "Tags", url = "tags", trailing_slash = true },
-    { name = "Authors", url = "authors", trailing_slash = true },
     { name = "Projects", url = "projects", trailing_slash = true },
     { name = "Repository", url = "https://github.com/lyralis/lyralis.org", new_tab = true },
 ]
